@@ -13,10 +13,12 @@ type VisibleSectorProps = {
     color: string;
     distance: number;
     azimuth: number;
+    hStart: number;
+    hEnd: number;
 };
 
 export const FOVComponent: React.FC<VisibleSectorProps> = React.memo(
-    ({ totalAngle, componentKey, startPoint, color, distance, azimuth }) => {
+    ({ totalAngle, componentKey, startPoint, color, distance, azimuth, hStart, hEnd }) => {
         const { globe } = useGlobeContext();
 
         if (globe === null) {
@@ -51,8 +53,8 @@ export const FOVComponent: React.FC<VisibleSectorProps> = React.memo(
             const start = new LonLat(refStartPoint.current.lon, refStartPoint.current.lat, 100);
 
             // setArcPath(getArc(ellipsoid, start, tempAzimuthForAnimat.current, refTotalAngle.current, refDistance.current));
-            setArcPath(getArc(ellipsoid, start, tempAzimuthForAnimate.current, refTotalAngle.current, refDistance.current));
-        }, [globe.planet.ellipsoid]);
+            setArcPath(getArc(ellipsoid, start, tempAzimuthForAnimate.current, refTotalAngle.current, refDistance.current, hStart, hEnd));
+        }, [globe.planet.ellipsoid, hEnd, hStart]);
 
         useEffect(() => {
             setter();

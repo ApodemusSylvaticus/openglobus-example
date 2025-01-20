@@ -2,7 +2,7 @@
 import './App.css'
 import {Globe, GlobeContextProvider} from "@openglobus/openglobus-react";
 import {SelfMarker} from "./selfMarker.tsx";
-import {FovManipulation} from "./fovManipulation.tsx";
+import {FovManipulation} from "./fov/fovManipulation.tsx";
 import {CenterButton} from "./centerButton";
 
 function App() {
