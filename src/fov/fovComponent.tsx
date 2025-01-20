@@ -8,7 +8,7 @@ const fps = 1 / 60;
 
 type VisibleSectorProps = {
     totalAngle: number;
-    componentKey: string; // вместо key
+    componentKey: string;
     startPoint: LonLat;
     color: string;
     distance: number;
@@ -52,7 +52,6 @@ export const FOVComponent: React.FC<VisibleSectorProps> = React.memo(
             const ellipsoid = globe.planet.ellipsoid;
             const start = new LonLat(refStartPoint.current.lon, refStartPoint.current.lat, 100);
 
-            // setArcPath(getArc(ellipsoid, start, tempAzimuthForAnimat.current, refTotalAngle.current, refDistance.current));
             setArcPath(getArc(ellipsoid, start, tempAzimuthForAnimate.current, refTotalAngle.current, refDistance.current, hStart, hEnd));
         }, [globe.planet.ellipsoid, hEnd, hStart]);
 
