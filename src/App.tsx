@@ -10,7 +10,7 @@ function App() {
   return (
       <GlobeContextProvider>
           <Globe name="myGlobe" minAltitude={500} maxAltitude={2500000}>
-<SelfMarker/>
+            <SelfMarker/>
               <FovManipulation/>
               <CenterButton/>
           </Globe>

@@ -1,10 +1,11 @@
 import {Billboard, Entity, useGlobeContext, Vector} from "@openglobus/openglobus-react";
 import React, {useEffect} from "react";
 import {LonLat} from "@openglobus/og/lib/js/LonLat";
+import {useRuler} from "./ruler";
 
 export const SelfMarker = React.memo(() => {
     const actualGPS  = new LonLat(14.43619, 50.07526);
-
+    useRuler();
     const { globe } = useGlobeContext();
 
         useEffect(() => {

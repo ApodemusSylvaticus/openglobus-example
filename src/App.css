@@ -40,12 +40,34 @@
   height: 100%;
 }
 
-.og-inner div{
-  display: none;
-}
+
 
 
 #root{
   width: 100%;
   height: 100%;
+}
+
+div.og-ruler_button{
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  top: 8px;
+  right: 32px;
+  z-index: 10;
+  border: 2px solid black;
+}
+
+.og-button-icon{
+  width: 100%;
+  height: 100%;
+}
+
+.og-button-icon svg{
+  width: 100%;
+  height: 100%;
+}
+
+.og-zoomin-button, .og-attribution, .og-zoomout-button, .og-coordinates, .og-center-icon, .og-scale-container, .og-compass-button{
+  display: none;
 }

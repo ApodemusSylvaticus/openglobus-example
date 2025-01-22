@@ -22,7 +22,6 @@ export function getArc(ellipsoid: Ellipsoid, center: LonLat, angel: number, tota
         resultArray.push(point);
     }
 
-    console.log('resultArray', resultArray)
 
     resultArray.push(startPosition);
     return resultArray;
